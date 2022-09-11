@@ -1,0 +1,84 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100vw;
+  height: 100vh;
+  background: #1d1f20;
+  font-family: 'Proxima Nova', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  gap: 15px;
+}
+
+form input, button {
+  background: #33343c;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00e6f6;
+  border: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 22px;
+  height: 22px;
+  background: url(../images/calendar.svg);
+  margin-top: -1px;
+  cursor: pointer;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+[data-tempo="container"] {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+[data-tempo="numero"] {
+  font-size: 6rem;
+  font-weight: bold;
+  letter-spacing: -3px;
+  text-align: center;
+  background: #33343c;
+  color: #00e6f6;
+  padding: 24px;
+}
+
+[data-tempo="texto"] {
+  background: #33343c;
+  color: #00e6f6;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+@media (max-width: 800px) {
+  form {
+    width: 256.15px;
+  }
+  
+  .countdown {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  [data-tempo="numero"] {
+    font-size: 4rem;
+  }
+}
